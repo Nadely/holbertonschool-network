@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+#checks whether it has received an argument on the command line; if it hasn't, it displays a usage message, otherwise it pings the IP address passed as an argument 5 times
+
+if [ $# -eq 0 ]; then #"then" marque le début du bloc d'instructions conditionnelles
+echo "Usage: $0 {IP_ADRESS}"
+exit 1
+fi #mot-clé standard pour marquer la fin d'une structure conditionnelle "if"
+ping -c 5 "$1"
