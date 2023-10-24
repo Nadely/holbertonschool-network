@@ -5,4 +5,6 @@ if [ $# -ne 1 ]; then #"then" marque le début du bloc d'instructions conditionn
 echo "Usage: $0 {IP_ADRESS}"
 exit 1
 fi #mot-clé standard pour marquer la fin d'une structure conditionnelle "if"
-ping -c 5 "$1"
+
+address_ip="$1"
+ping -c 5 "$address_ip"
