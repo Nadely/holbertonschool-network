@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
-# a Bash script that displays listening ports:
-# That only shows listening sockets
-# That shows the PID and name of the program to which each socket belongs
+#displays information about the processes listening to current TCP connections, listing their PID and the name of the associated program.
 
 sudo ss -tulp | grep 'LISTEN' | awk '{print "PID: " $7, "Program: " $9}'
