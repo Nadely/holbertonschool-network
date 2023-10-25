@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #displays information about the processes listening to current TCP connections, listing their PID and the name of the associated program.
 
-sudo ss -tulp | grep 'LISTEN' | awk '{print "PID: " $7, "Program: " $9}'
+netstat
